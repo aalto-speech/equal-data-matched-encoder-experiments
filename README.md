@@ -1,8 +1,11 @@
 # Principled Comparisons for End-to-End Speech Recognition: Attention vs Hybrid at the 1000-hour Scale 
 
-This repository lists the experiment implementations for the Matched Encoder and Equal Data comparisons of HMM/DNN and Attention-based ASR systems.
+This repository lists the experiment implementations for the Matched Encoder and Equal Data comparisons of HMM/DNN and Attention-based ASR systems, and provides a full pairwise analysis PDF (the article includes the interesting parts of the table)
 
-Additionally, a repository has the analysis Python Notebook.
+
+## Pairwise analysis table
+
+See the file full-pairwise-analysis.pdf in this repository.
 
 ## Librispeech
 
@@ -45,6 +48,13 @@ Neural network training and inference was run on Nvidia V100 32GB GPUs.
 
 ## Analysis code
 
-The analysis was performed interactively, using the Notebook in the following repository. The connected data (system text outputs and reference text) is currently not included in the repository, as the files are too large, but the data can be provided - contact us via email.
+The analysis was initially performed interactively, using the Notebook in the following repository. The connected data (system text outputs and reference text) is currently not included in the repository, as the files are too large, but the data can be provided - contact us via email.
 
 [Link](https://github.com/aalto-speech/attn-hmm-jrnl-analysis-notebook)
+
+Later, as it became more clear what values we wanted to compute, we implemented scripts in the Librispeech repository under `local/make-analysis-line.py`, `local/rare_word_errors.py` and `local/make-edit-streak-figure.py` to compute the same analysis as above - you can find implementations
+[there](https://github.com/aalto-speech/sb-libri-hmmdnn).
+
+
+
+
